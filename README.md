@@ -2,13 +2,13 @@
 
 ### [The Odin Project: Homepage](https://www.theodinproject.com/lessons/node-path-advanced-html-and-css-homepage)
 
-Replica of the images shown below.
+Replica of the images shown below to practice responsive design.
 
 #### Desktop Design:
-![Portfolio](portfolio.png)
+![Portfolio](designs/portfolio.png)
 
 #### Tablet Design:
-![Portfolio Tablet](portfolio_tablet.png)
+![Portfolio Tablet](designs/portfolio_tablet.png)
 
 #### Mobile Design:
-![Portfolio Mobile](portfolio_mobile.png)
+![Portfolio Mobile](designs/portfolio_mobile.png)
