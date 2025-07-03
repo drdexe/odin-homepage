@@ -88,6 +88,7 @@ header {
 header > .portrait {
   position: relative;
   margin: 2rem 2rem 1rem;
+  z-index: 2
 }
 
 header > .portrait > img {
@@ -108,6 +109,19 @@ header figcaption {
 .about {
   background-color: white;
   padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.about::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: -249px;
+  width: 100%;
+  height: 250px;
+  clip-path: polygon(0 calc(100% - 1px), 100% 0, 100% 100%, 0 100%);
 }
 
 .about > h2 {
@@ -133,6 +147,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 0 1rem;
+  position: relative;
 }
 
 main > h2 {
@@ -222,6 +237,17 @@ footer {
 }
 
 @media (min-width: 600px) {
+  header::after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 500px;
+    clip-path: polygon(0 calc(100% - 1px), 100% 0, 100% 100%, 0 100%);
+  }
+
   header > .portrait {
     width: 45vw;
     float: left;
@@ -243,6 +269,10 @@ footer {
     padding: 4rem 2rem 1rem;
     width: 75%;
     box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+  }
+
+  .about::before {
+    all: unset;
   }
 
   main {
