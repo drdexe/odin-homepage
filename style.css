@@ -18,6 +18,16 @@
   font-display: swap;
 }
 
+:root {
+  --h1-font-size: clamp(3rem, 2.7273rem + 1.0909vw, 3.6rem);
+  --h2-font-size: clamp(2.25rem, 2.0455rem + 0.8182vw, 2.7rem);
+  --h3-font-size: clamp(1.875rem, 1.7045rem + 0.6818vw, 2.25rem);
+  --h4-font-size: clamp(1.5rem, 1.3636rem + 0.5455vw, 1.8rem);
+  --h5-font-size: clamp(1.25rem, 1.1364rem + 0.4545vw, 1.5rem);
+  --h6-font-size: clamp(1.125rem, 1.0227rem + 0.4091vw, 1.35rem);
+  --p-font-size: clamp(0.8333rem, 0.7576rem + 0.303vw, 1rem);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,36 +52,80 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(3rem, 2.7273rem + 1.0909vw, 3.6rem);
+  font-size: var(--h1-font-size);
 }
 
 h2 {
-  font-size: clamp(2.25rem, 2.0455rem + 0.8182vw, 2.7rem);
+  font-size: var(--h2-font-size);
 }
 
 h3 {
-  font-size: clamp(1.875rem, 1.7045rem + 0.6818vw, 2.25rem);
+  font-size: var(--h3-font-size);
 }
 
 h4 {
-  font-size: clamp(1.5rem, 1.3636rem + 0.5455vw, 1.8rem);
+  font-size: var(--h4-font-size);
 }
 
 h5 {
-  font-size: clamp(1.25rem, 1.1364rem + 0.4545vw, 1.5rem);
+  font-size: var(--h5-font-size);
 }
 
 h6 {
-  font-size: clamp(1.125rem, 1.0227rem + 0.4091vw, 1.35rem);
+  font-size: var(--h6-font-size);
 }
 
 p {
-  font-size: clamp(0.8333rem, 0.7576rem + 0.303vw, 1rem);
+  font-size: var(--p-font-size);
   color: #555;
 }
 
 header {
   background-color: #0891b2;
+  position: relative;
+}
+
+header > .portrait {
+  position: relative;
+  margin: 2rem 2rem 1rem;
+}
+
+header > .portrait > img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+header figcaption {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  color: white;
+}
+
+.about {
+  background-color: white;
+  padding: 0 1rem;
+}
+
+.about > h2 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.about > p {
+  font-size: calc(var(--p-font-size) * 1.5);
+  line-height: 1.5;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem;
 }
 
 main {
@@ -168,6 +222,29 @@ footer {
 }
 
 @media (min-width: 600px) {
+  header > .portrait {
+    width: 45vw;
+    float: left;
+  }
+
+  header > .portrait > img {
+    aspect-ratio: .9;
+  }
+
+  header figcaption {
+    width: max-content;
+    top: 30px;
+    left: unset;
+    right: -75%;
+  }
+
+  .about {
+    margin: 10rem auto 5rem;
+    padding: 4rem 2rem 1rem;
+    width: 75%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+  }
+
   main {
     padding: 0 2rem;
   }
@@ -178,6 +255,41 @@ footer {
 }
 
 @media (min-width: 1200px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header > .portrait {
+    width: unset;
+    margin: 4rem 0;
+  }
+
+  header figcaption {
+    top: unset;
+    right: unset;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about {
+    margin: unset;
+    padding: 3rem 2rem 2rem;
+    width: 30%;
+  }
+
+  .about > h2 {
+    text-align: left;
+    margin: unset;
+    margin-bottom: 3rem;
+  }
+
+  .socials {
+    justify-content: flex-end;
+  }
+  
   main {
     padding: 0;
   }
