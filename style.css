@@ -159,7 +159,7 @@ main > h2 {
 .project-list {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 50px;
   width: min(1500px, 100%);
 }
@@ -358,7 +358,7 @@ footer .socials {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1310px) {
   header {
     display: flex;
     justify-content: center;
@@ -394,6 +394,10 @@ footer .socials {
     justify-content: flex-end;
   }
 
+  .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  }
+
   footer {
     align-items: flex-start;
   }
@@ -407,7 +411,7 @@ footer .socials {
   }
 }
 
-@media (375px <= width <= 882.5px) or (width > 1500px) {
+@media (320px <= width <= 772.5px) or (width > 1500px) {
   h2 {
     font-size: calc(var(--h2-font-size) * 1.5);
   }
