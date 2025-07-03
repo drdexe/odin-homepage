@@ -17,3 +17,168 @@
   font-style: normal;
   font-display: swap;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: clamp(3rem, 2.7273rem + 1.0909vw, 3.6rem);
+}
+
+h2 {
+  font-size: clamp(2.25rem, 2.0455rem + 0.8182vw, 2.7rem);
+}
+
+h3 {
+  font-size: clamp(1.875rem, 1.7045rem + 0.6818vw, 2.25rem);
+}
+
+h4 {
+  font-size: clamp(1.5rem, 1.3636rem + 0.5455vw, 1.8rem);
+}
+
+h5 {
+  font-size: clamp(1.25rem, 1.1364rem + 0.4545vw, 1.5rem);
+}
+
+h6 {
+  font-size: clamp(1.125rem, 1.0227rem + 0.4091vw, 1.35rem);
+}
+
+p {
+  font-size: clamp(0.8333rem, 0.7576rem + 0.303vw, 1rem);
+  color: #555;
+}
+
+header {
+  background-color: #0891b2;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+main > h2 {
+  width: min(1000px, 100%);
+  text-align: center;
+  margin: 1rem;
+}
+
+.project-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  width: min(1000px, 100%);
+}
+
+.project-card {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+  transition: box-shadow .2s;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .24);
+}
+
+.project-screenshot {
+  display: grid;
+  place-items: center;
+  color: white;
+  aspect-ratio: 1.4;
+}
+
+.project-screenshot > :first-child {
+  width: 70%;
+  text-align: center;
+}
+
+.project-card:nth-child(1) > .project-screenshot {
+  background-color: #9e1c1c;
+}
+
+.project-card:nth-child(2) > .project-screenshot {
+  background-color: #7c75ca;
+}
+
+.project-card:nth-child(3) > .project-screenshot {
+  background-color: #5e8f4d;
+}
+
+.project-card:nth-child(4) > .project-screenshot {
+  background-color: #c363b4;
+}
+
+.project-card:nth-child(5) > .project-screenshot {
+  background-color: #d88f39;
+}
+
+.project-card:nth-child(6) > .project-screenshot {
+  background-color: #4ba2d2;
+}
+
+.project-name {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  aspect-ratio: 7;
+  padding: 1em;
+}
+
+.project-name > :first-child {
+  margin-right: auto;
+}
+
+.project-name > a {
+  display: grid;
+  place-items: center;
+}
+
+.project-description {
+  aspect-ratio: 3;
+  padding: 0 1em;
+}
+
+footer {
+  background-color: #0891b2;
+}
+
+@media (min-width: 600px) {
+  main {
+    padding: 0 2rem;
+  }
+
+  main > h2 {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding: 0;
+  }
+}
