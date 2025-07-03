@@ -63,18 +63,6 @@ h3 {
   font-size: var(--h6-font-size);
 }
 
-h4 {
-  font-size: var(--h4-font-size);
-}
-
-h5 {
-  font-size: var(--h5-font-size);
-}
-
-h6 {
-  font-size: var(--h6-font-size);
-}
-
 p {
   font-size: var(--p-font-size);
   color: #555;
@@ -82,7 +70,7 @@ p {
 
 .project-screenshot > p {
   font-family: "Playfair Display", serif;
-  font-size: var(--h2-font-size);
+  font-size: var(--h3-font-size);
   color: white;
 }
 
@@ -161,7 +149,7 @@ main {
 }
 
 main > h2 {
-  width: min(1000px, 100%);
+  width: min(1500px, 100%);
   text-align: center;
   margin: 1rem;
 }
@@ -169,9 +157,9 @@ main > h2 {
 .project-list {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   gap: 50px;
-  width: min(1000px, 100%);
+  width: min(1500px, 100%);
 }
 
 .project-card {
@@ -225,7 +213,7 @@ main > h2 {
   align-items: center;
   gap: 15px;
   aspect-ratio: 7;
-  padding: 1em;
+  padding: 1rem;
 }
 
 .project-name > h3 {
@@ -240,7 +228,7 @@ main > h2 {
 
 .project-description {
   aspect-ratio: 3;
-  padding: 0 1em;
+  padding: 0 1rem;
 }
 
 footer {
@@ -401,10 +389,6 @@ footer .socials {
   .about > .socials {
     justify-content: flex-end;
   }
-  
-  main {
-    padding: 0 0 10rem;
-  }
 
   footer {
     align-items: flex-start;
@@ -419,14 +403,13 @@ footer .socials {
   }
 }
 
-@media (400px <= width <= 632.5px) {
-  h1 {
-    font-size: calc(var(--h1-font-size) * 1.5);
+@media (375px <= width <= 882.5px) or (width > 1500px) {
+  h2 {
+    font-size: calc(var(--h2-font-size) * 1.5);
   }
 
-  h2,
   .project-screenshot > p {
-    font-size: calc(var(--h2-font-size) * 1.5);
+    font-size: calc(var(--h3-font-size) * 1.5);
   }
 
   h3 {
