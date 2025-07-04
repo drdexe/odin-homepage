@@ -185,7 +185,12 @@ main > h2 {
   text-align: center;
 }
 
-.project-card:nth-child(1) > .project-screenshot {
+.project-screenshot > img {
+  width: 100%;
+  height: auto;
+}
+
+/* .project-card:nth-child(1) > .project-screenshot {
   background-color: #9e1c1c;
 }
 
@@ -207,7 +212,7 @@ main > h2 {
 
 .project-card:nth-child(6) > .project-screenshot {
   background-color: #4ba2d2;
-}
+} */
 
 .project-name {
   display: flex;
